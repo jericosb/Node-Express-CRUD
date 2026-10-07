@@ -1,0 +1,28 @@
+Book API Demo, Express
+
+SETUP (do once, needs internet)
+  1. Open this folder in the terminal.
+  2. Run:  npm init -y
+  3. Run:  npm install express
+
+RUN
+  node server.js
+  You should see: Server running on http://localhost:3000
+
+TRY IN THE BROWSER (GET only)
+  http://localhost:3000            welcome message
+  http://localhost:3000/books      the full list as JSON
+  http://localhost:3000/books/1    one book by id
+
+TRY IN POSTMAN (all methods)
+  GET     http://localhost:3000/books
+  GET     http://localhost:3000/books/1
+  POST    http://localhost:3000/books
+          Body, raw, JSON:   { "title": "New Book" }
+          You should get a 201 Created and the new book.
+  PUT     http://localhost:3000/books/1
+          Body, raw, JSON:   { "title": "Updated Title" }
+  DELETE  http://localhost:3000/books/1
+
+NOTE
+  The data is kept in memory, so it resets every time you restart the server.
